@@ -23,9 +23,22 @@ function saveTask(e) {
         localStorage.setItem('tasks', JSON.stringify(storedTasks));
     }
 
-    // getTasks(); storedTasks
-    // document.getElementById('formTask').reset();
+    getTasks();
+    document.getElementById('formTask').reset();
     e.preventDefault();
+}
+
+function deleteTask(title) {
+    console.log(title)
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
+    for (let i = 0; i < tasks.length; i++) {
+        if (tasks[i].title == title) {
+            tasks.splice(i, 1);
+        }
+    }
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    getTasks();
 }
 
 function getTasks() {
@@ -44,4 +57,7 @@ function getTasks() {
           </div>
         </div>`;
     }
+
+
 }
+getTasks();
