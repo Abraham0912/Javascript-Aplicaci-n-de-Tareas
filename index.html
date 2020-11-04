@@ -9,7 +9,38 @@
 </head>
 
 <body>
+    <!-- NAVEGATION -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">Task App</a>
+        </div>
+    </nav>
 
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="formTask">
+                            <div class="form-group">
+                                <input type="text" id="title" placeholder="Add A Todo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="description" rows="8" cols="80" placeholder="Add A Description" class="form-control"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                save
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="clo-md-8"></div>
+            <div id="tasks"></div>
+        </div>
+        <!-- SCRIPTS -->
+        <script src="app.js"></script>
 </body>
 
 </html>
